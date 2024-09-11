@@ -6,6 +6,7 @@ import { CloseComponent } from './close/close.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'close', component: CloseComponent },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 ];
 
 @NgModule({

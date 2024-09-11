@@ -8,14 +8,13 @@ import { Router } from '@angular/router';
 })
 export class LiffService {
 
-    constructor(private router: Router,) { }
+    constructor() { }
 
     liffLogin() {
         liff.init({ liffId: "2005367776-kKr8zaDn", })
             .then(() => {
                 if (!liff.isLoggedIn()) {
                     liff.login();
-                    this.router.navigate(['/login']);
                 }
             })
             .catch((err) => {
