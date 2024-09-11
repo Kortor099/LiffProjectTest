@@ -21,7 +21,10 @@ export class AppComponent implements OnInit {
       .then(() => {
         if (!liff.isLoggedIn()) {
           liff.login();
+        }
+        else {
           this.router.navigate(['/login']);
+          console.log("login success");
         }
       })
       .catch((err) => {
