@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh
+}
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 22, 22);
+    color: white;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    height: 15vh;
+    font-size: 40px;
+}
+
+.input {
+    margin: 15px;
+    width: 60%;
+}

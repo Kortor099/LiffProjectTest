@@ -1,0 +1,42 @@
+<!-- <p>login works!</p> -->
+<div class="login-form">
+    <div class="container">
+        <div class="header">
+          <p><strong>Login</strong></p>
+        </div>
+      
+        <div class="input">
+          <input
+            type="text"
+            class="form-input"
+            id="username"
+            [(ngModel)]="username"
+            name="username"
+            required
+            placeholder="Username"
+          />
+        </div>
+      
+        <div class="input">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="password"
+            name="password"
+            required
+            placeholder="Password"
+          />
+        </div>
+      
+        <div class="input">
+          <button class="login-btn" (click)="onLogin()">Login</button>
+        </div>
+      
+        <div *ngIf="errorMessage" class="error-message">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </div>
+      
+    </div>
+
