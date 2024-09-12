@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LiffService } from '../liff.service';
+// import { LiffService } from '../liff.service';
 
 @Component({
   selector: 'app-close',
@@ -8,8 +8,8 @@ import { LiffService } from '../liff.service';
 })
 export class CloseComponent {
 
-  constructor(private liffService: LiffService) { }
-  onClose() {
-    this.liffService.liffClose();
-  }
+  constructor() { }
+  // onClose() {
+  //   this.liffService.liffClose();
+  // }
 }

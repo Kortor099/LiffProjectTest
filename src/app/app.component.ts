@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LiffService } from './liff.service';
+// import { LiffService } from './liff.service';
 import liff from '@line/liff';
 import { Router } from '@angular/router';
 
@@ -11,25 +11,33 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Liff_ProjectTest';
 
-  constructor(private liffService: LiffService,
+  constructor(
     private router: Router
   ) { }
   ngOnInit() {
+    alert('????????')
     // this.liffService.liffLogin();
+    liff
+      .init({
+        // liffId: "2005367776-kKr8zaDn", // Use own liffId
+        liffId: "2006307091-PJ050Qv1", 
+      })
+      .then((res) => {
+        alert('1111')
 
-    liff.init({ liffId: "2005367776-kKr8zaDn", })
-      .then(() => {
+        // liff.ready.then(() => {
+        //   // do something you want when liff.init finishes
+        //   console.log('1232312123')
+        // });
         if (!liff.isLoggedIn()) {
           liff.login();
         }
-        else {
-          this.router.navigate(['/login']);
-          console.log("login success");
-        }
+        // Stดart to use liff's api
       })
       .catch((err) => {
+        // Error happens during initialization
         console.log(err.code, err.message);
       });
-      
+
   }
 }
