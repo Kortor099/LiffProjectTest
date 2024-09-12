@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     private router: Router
   ) { }
   ngOnInit() {
-    alert('????????')
+    // alert('????????')
     // this.liffService.liffLogin();
     liff
       .init({
